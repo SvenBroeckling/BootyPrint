@@ -52,12 +52,20 @@ $theme-colors: (
     "light": $light,
     "white": $white,
     "black": $black,
-    "dark": $dark
+    "dark": $dark,
+    "teal": $teal,
+    "indigo": $indigo,
+    "purple": $purple,
+    "pink": $pink,
+    "orange": $orange,
+    "yellow": $yellow,
+    "red": $red,
+    "cyan": $cyan,
 );
 
 // Body
 $body-bg: css-var("body-bg", $white) !default;
-$body-color: css-var("body-color", $gray-900) !default;
+$body-color: css-var("body-color", $black) !default;
 
 // Page
 $page-size: css-var("page-size", 210mm 297mm) !default; // A4 by default

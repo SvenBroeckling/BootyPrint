@@ -52,15 +52,6 @@ This will generate both `bootyprint.css` and `bootyprint.min.css` in the `dist` 
 - Behavior changed to suit print media. No breakpoints, layout changed for fixed sizes
 - Supports variables and directives like `@page`
 
-### Bootstrap Features
-
-- Typography styling
-- Grid system
-- Layout components
-- Spacing utilities
-- Color utilities
-- Flexbox utilities
-
 ### Grid System
 
 BootyPrint includes a simplified 12-column grid system:
@@ -71,6 +62,26 @@ BootyPrint includes a simplified 12-column grid system:
     <div class="row">
         <div class="col-6">Half width</div>
         <div class="col-6">Half width</div>
+    </div>
+</div>
+```
+
+### Flex Utilities
+
+Flex utilities to create flex layouts:
+
+```html
+
+<div class="d-flex flex-column align-items-center">
+    <div class="d-flex justify-content-between">
+        <h2>I'm a h2!</h2>
+        <h2>I'm a h2!</h2>
+        <h2>I'm a h2!</h2>
+    </div>
+    <div class="d-flex justify-content-between">
+        <h2>I'm a h2!</h2>
+        <h2>I'm a h2!</h2>
+        <h2>I'm a h2!</h2>
     </div>
 </div>
 ```
@@ -94,6 +105,17 @@ Margin and padding utilities:
 <div class="mt-3 mb-4 p-2">Spaced content</div>
 ```
 
+### Sizing
+
+Sizing utilities:
+
+```html
+
+<div class="w-100">Full width</div>
+<div class="h-25">Quarter height</div>
+```
+
+
 ### Colors
 
 Background and text color utilities:
@@ -103,11 +125,23 @@ Background and text color utilities:
 <div class="bg-primary text-white">Colored box</div>
 ```
 
+### Borders
+
+Basic bootstrap border classes:
+
+```html
+
+<div class="border border-2 rounded">Rouned border</div>
+<div class="border-start">Border left</div>
+```
+
 ## Demo
 
-A demo document is available in the `demo` directory to showcase all the available components and utilities.
+A [demo document](demo/demo.pdf) is available in the `demo` directory to showcase all the available components and
+utilities.
 
-Since BootyPrint is a css framework for WeasyPrint, you need to use weasyprint in python to see the results. There is a npm script to install weasyprint and build the demo document.
+Since BootyPrint is a css framework for WeasyPrint, you need to use weasyprint in python to see the results. There is a
+npm script to install weasyprint and build the demo document.
 
 ```bash
 $ npm run demo
