@@ -1,0 +1,25 @@
+{
+  "name": "bootyprint",
+  "version": "1.0.0",
+  "description": "A lightweight Bootstrap alternative designed specifically for WeasyPrint",
+  "main": "dist/bootyprint.css",
+  "scripts": {
+    "build": "npm run compile && npm run minify",
+    "compile": "sass src/scss/bootyprint.scss:dist/bootyprint.css --style expanded --no-source-map",
+    "minify": "sass src/scss/bootyprint.scss:dist/bootyprint.min.css --style compressed --no-source-map",
+    "watch": "sass --watch src/scss/bootyprint.scss:dist/bootyprint.css --style expanded",
+    "dev": "npm run watch"
+  },
+  "keywords": [
+    "bootstrap",
+    "weasyprint",
+    "css",
+    "scss",
+    "pdf"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.70.0"
+  }
+}

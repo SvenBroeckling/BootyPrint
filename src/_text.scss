@@ -1,0 +1,65 @@
+// Text utilities
+@use '../variables' as vars;
+
+// Alignment
+.text-center {
+  text-align: center !important;
+}
+
+.text-start {
+  text-align: left !important;
+}
+
+.text-end {
+  text-align: right !important;
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+// Transform
+.text-lowercase {
+  text-transform: lowercase !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.text-capitalize {
+  text-transform: capitalize !important;
+}
+
+// Truncate
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Font weight
+.font-weight-light {
+  font-weight: vars.$font-weight-light !important;
+}
+
+.font-weight-lighter {
+  font-weight: vars.$font-weight-lighter !important;
+}
+
+.font-weight-normal {
+  font-weight: vars.$font-weight-normal !important;
+}
+
+.font-weight-bold {
+  font-weight: vars.$font-weight-bold !important;
+}
+
+.font-weight-bolder {
+  font-weight: vars.$font-weight-bolder !important;
+}
+
+// Font style
+.font-italic {
+  font-style: italic !important;
+}

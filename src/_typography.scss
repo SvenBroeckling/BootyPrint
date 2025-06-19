@@ -1,0 +1,133 @@
+// Typography
+@use '../variables' as vars;
+@use 'sass:color';
+@use 'sass:math';
+@use 'sass:map';
+
+// Typography mixins
+@mixin font-size($size) {
+  font-size: $size;
+}
+
+@mixin heading-style() {
+  margin-top: 0;
+  margin-bottom: vars.$headings-margin-bottom;
+  font-family: vars.$font-family-headings;
+  font-weight: vars.$headings-font-weight;
+  line-height: vars.$headings-line-height;
+}
+
+@mixin display-heading($size) {
+  font-size: map.get(vars.$display-font-sizes, $size);
+  font-weight: vars.$display-font-weight;
+  line-height: vars.$display-line-height;
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  @include heading-style();
+}
+
+h1 {
+  font-size: vars.$h1-font-size;
+}
+
+h2 {
+  font-size: vars.$h2-font-size;
+}
+
+h3 {
+  font-size: vars.$h3-font-size;
+}
+
+h4 {
+  font-size: vars.$h4-font-size;
+}
+
+h5 {
+  font-size: vars.$h5-font-size;
+}
+
+h6 {
+  font-size: vars.$h6-font-size;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+// Headings
+.h1 {
+  font-size: vars.$h1-font-size;
+}
+
+.h2 {
+  font-size: vars.$h2-font-size;
+}
+
+.h3 {
+  font-size: vars.$h3-font-size;
+}
+
+.h4 {
+  font-size: vars.$h4-font-size;
+}
+
+.h5 {
+  font-size: vars.$h5-font-size;
+}
+
+.h6 {
+  font-size: vars.$h6-font-size;
+}
+
+// Display headings
+@for $i from 1 through 4 {
+  .display-#{$i} {
+    @include display-heading($i);
+  }
+}
+
+// Lead
+.lead {
+  font-size: vars.$font-size-lg;
+  font-weight: 300;
+}
+
+// Lists
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
+
+// Links
+a {
+  color: vars.$primary;
+  text-decoration: none;
+
+  &:hover {
+    color: color.scale(vars.$primary, $lightness: -15%);
+    text-decoration: underline;
+  }
+}
+
+// Images
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}

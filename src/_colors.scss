@@ -1,0 +1,21 @@
+// Color utilities
+@use '../variables' as vars;
+
+// Text colors
+@each $name, $value in vars.$theme-colors {
+  .text-#{$name} {
+    color: $value !important;
+  }
+}
+
+// Background colors
+@each $name, $value in vars.$theme-colors {
+  .bg-#{$name} {
+    background-color: $value !important;
+  }
+}
+
+// Special cases
+.text-muted {
+  color: vars.$gray-600 !important;
+}

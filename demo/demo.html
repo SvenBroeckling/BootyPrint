@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BootyPrint Demo</title>
+    <link rel="stylesheet" href="../dist/bootyprint.css">
+    <style>
+        :root {
+            --primary: #3f51b5;
+            --secondary: #2196f3;
+            --font-size-base: 14px;
+        }
+
+        body {
+            padding: 20px;
+        }
+
+        .demo-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid var(--gray-300);
+            border-radius: var(--border-radius);
+        }
+
+        .demo-title {
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--gray-300);
+        }
+
+        .color-box {
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: var(--border-radius);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4">BootyPrint Demo</h1>
+        <p class="lead mb-4">This page demonstrates the features of BootyPrint, a lightweight Bootstrap alternative designed specifically for WeasyPrint.</p>
+
+        <!-- Typography -->
+        <div class="demo-section">
+            <h2 class="demo-title">Typography</h2>
+
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+
+            <hr>
+
+            <h3 class="h5">This is an h3 with h5 class</h3>
+
+            <hr>
+
+            <p class="text-primary">Primary text</p>
+            <p class="text-secondary">Secondary text</p>
+            <p class="text-success">Success text</p>
+            <p class="text-danger">Danger text</p>
+            <p class="text-warning">Warning text</p>
+            <p class="text-info">Info text</p>
+            <p class="text-muted">Muted text</p>
+        </div>
+
+        <!-- Grid System -->
+        <div class="demo-section">
+            <h2 class="demo-title">Grid System</h2>
+
+            <div class="row mb-3">
+                <div class="col-12">
+                    <div class="bg-light p-3 text-center">col-12</div>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-6">
+                    <div class="bg-light p-3 text-center">col-6</div>
+                </div>
+                <div class="col-6">
+                    <div class="bg-light p-3 text-center">col-6</div>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-4">
+                    <div class="bg-light p-3 text-center">col-4</div>
+                </div>
+                <div class="col-4">
+                    <div class="bg-light p-3 text-center">col-4</div>
+                </div>
+                <div class="col-4">
+                    <div class="bg-light p-3 text-center">col-4</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <div class="bg-light p-3 text-center">col-3</div>
+                </div>
+                <div class="col-3">
+                    <div class="bg-light p-3 text-center">col-3</div>
+                </div>
+                <div class="col-3">
+                    <div class="bg-light p-3 text-center">col-3</div>
+                </div>
+                <div class="col-3">
+                    <div class="bg-light p-3 text-center">col-3</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Colors -->
+        <div class="demo-section">
+            <h2 class="demo-title">Colors</h2>
+
+            <div class="color-box bg-primary text-white">Primary</div>
+            <div class="color-box bg-secondary text-white">Secondary</div>
+            <div class="color-box bg-success text-white">Success</div>
+            <div class="color-box bg-danger text-white">Danger</div>
+            <div class="color-box bg-warning">Warning</div>
+            <div class="color-box bg-info">Info</div>
+            <div class="color-box bg-light">Light</div>
+            <div class="color-box bg-dark text-white">Dark</div>
+        </div>
+
+        <!-- Spacing -->
+        <div class="demo-section">
+            <h2 class="demo-title">Spacing</h2>
+
+            <p>The box below has <code>p-3 mb-4</code> classes (padding 3, margin-bottom 4):</p>
+            <div class="bg-light p-3 mb-4">This box has padding 3 and margin-bottom 4</div>
+
+            <p>The box below has <code>px-4 py-2 mt-3</code> classes (padding-x 4, padding-y 2, margin-top 3):</p>
+            <div class="bg-light px-4 py-2 mt-3">This box has horizontal padding 4, vertical padding 2, and margin-top 3</div>
+        </div>
+
+        <!-- Flex -->
+        <div class="demo-section">
+            <h2 class="demo-title">Flex</h2>
+
+            <p>Justify content between:</p>
+            <div class="d-flex justify-content-between mb-3">
+                <div class="bg-light p-2">Item 1</div>
+                <div class="bg-light p-2">Item 2</div>
+                <div class="bg-light p-2">Item 3</div>
+            </div>
+
+            <p>Justify content center:</p>
+            <div class="d-flex justify-content-center mb-3">
+                <div class="bg-light p-2 mx-2">Item 1</div>
+                <div class="bg-light p-2 mx-2">Item 2</div>
+                <div class="bg-light p-2 mx-2">Item 3</div>
+            </div>
+
+            <p>Align items center:</p>
+            <div class="d-flex align-items-center" style="height: 100px; background-color: #f8f9fa;">
+                <div class="bg-primary text-white p-2 mx-2">Item 1</div>
+                <div class="bg-primary text-white p-2 mx-2" style="height: 60px;">Item 2</div>
+                <div class="bg-primary text-white p-2 mx-2">Item 3</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

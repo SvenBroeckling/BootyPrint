@@ -1,0 +1,51 @@
+// Margin and padding utilities
+@use '../variables' as vars;
+@use 'sass:math';
+
+// Spacing mixin
+@mixin generate-spacing-utilities($property, $abbrev) {
+  @each $size, $value in vars.$spacers {
+    // All sides
+    .#{$abbrev}-#{$size} {
+      #{$property}: $value !important;
+    }
+
+    // Top
+    .#{$abbrev}t-#{$size} {
+      #{$property}-top: $value !important;
+    }
+
+    // Right
+    .#{$abbrev}r-#{$size} {
+      #{$property}-right: $value !important;
+    }
+
+    // Bottom
+    .#{$abbrev}b-#{$size} {
+      #{$property}-bottom: $value !important;
+    }
+
+    // Left
+    .#{$abbrev}l-#{$size} {
+      #{$property}-left: $value !important;
+    }
+
+    // X-axis
+    .#{$abbrev}x-#{$size} {
+      #{$property}-right: $value !important;
+      #{$property}-left: $value !important;
+    }
+
+    // Y-axis
+    .#{$abbrev}y-#{$size} {
+      #{$property}-top: $value !important;
+      #{$property}-bottom: $value !important;
+    }
+  }
+}
+
+// Generate margin utilities
+@include generate-spacing-utilities(margin, m);
+
+// Generate padding utilities
+@include generate-spacing-utilities(padding, p);
