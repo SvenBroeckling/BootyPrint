@@ -1,6 +1,6 @@
 {
   "name": "bootyprint",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A lightweight Bootstrap alternative designed specifically for WeasyPrint",
   "main": "dist/bootyprint.css",
   "scripts": {
