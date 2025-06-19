@@ -2,7 +2,7 @@
 
 // Function to get CSS variable with fallback to the default SCSS value
 @function css-var($property-name, $fallback) {
-  @return var(--#{$property-name}, $fallback);
+    @return var(--#{$property-name}, $fallback);
 }
 
 // Note that all variables taken from css vars are
@@ -43,14 +43,16 @@ $light: css-var("light", $gray-100) !default;
 $dark: css-var("dark", $gray-900) !default;
 
 $theme-colors: (
-        "primary": $primary,
-        "secondary": $secondary,
-        "success": $success,
-        "info": $info,
-        "warning": $warning,
-        "danger": $danger,
-        "light": $light,
-        "dark": $dark
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "light": $light,
+    "white": $white,
+    "black": $black,
+    "dark": $dark
 );
 
 // Body
@@ -64,12 +66,12 @@ $page-margin: css-var("page-margin", 3mm 3mm 3mm 2mm) !default;
 // Spacing
 $spacer: 1rem !default;
 $spacers: (
-        0: 0,
-        1: math.div($spacer, 4),
-        2: math.div($spacer, 2),
-        3: $spacer,
-        4: math.div($spacer * 3, 2),
-        5: $spacer * 3
+    0: 0,
+    1: math.div($spacer, 4),
+    2: math.div($spacer, 2),
+    3: $spacer,
+    4: math.div($spacer * 3, 2),
+    5: $spacer * 3
 ) !default;
 
 // Links
@@ -125,11 +127,11 @@ $headings-line-height: css-var("headings-line-height", 1.2) !default;
 
 $border-width: 1px !default;
 $border-widths: (
-        1: 1pt,
-        2: 2pt,
-        3: 3pt,
-        4: 4pt,
-        5: 5pt
+    1: 1pt,
+    2: 2pt,
+    3: 3pt,
+    4: 4pt,
+    5: 5pt
 ) !default;
 $border-style: solid !default;
 $border-color: $gray-300 !default;
@@ -142,12 +144,12 @@ $border-radius-xxl: 2rem !default;
 $border-radius-pill: 50rem !default;
 
 $border-radius-map: (
-        1: $border-radius-sm,
-        2: $border-radius,
-        3: $border-radius-lg,
-        4: $border-radius-xl,
-        5: $border-radius-xxl,
-        6: $border-radius-pill
+    1: $border-radius-sm,
+    2: $border-radius,
+    3: $border-radius-lg,
+    4: $border-radius-xl,
+    5: $border-radius-xxl,
+    6: $border-radius-pill
 ) !default;
 
 $box-shadow: 0 .5rem 1rem rgba($black, .15) !default;
@@ -157,10 +159,10 @@ $box-shadow-inset: inset 0 1px 2px rgba($black, .075) !default;
 
 // Display headings
 $display-font-sizes: (
-        1: 5rem,
-        2: 4.5rem,
-        3: 4rem,
-        4: 3.5rem
+    1: 5rem,
+    2: 4.5rem,
+    3: 4rem,
+    4: 3.5rem
 ) !default;
 
 $display-font-weight: 300 !default;

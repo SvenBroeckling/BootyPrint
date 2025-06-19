@@ -1,37 +1,8 @@
 # BootyPrint
 
-A lightweight Bootstrap alternative designed specifically for WeasyPrint. This library provides a simplified version of
-Bootstrap's core functionality that works well with WeasyPrint for PDF generation.
-
-## Features
-
-- Behavior changed to suit print media. No breakpoint, layout changed for fixed sizes
-- Supports variables and directives like `@page`
-- Modern build system with SCSS source files
-- Minified and full versions available
-
-### Bootstrap Features
-
-- Typography styling
-- Grid system
-- Layout components
-- Spacing utilities
-- Color utilities
-- Flexbox utilities
-
-### Components
-
-While most bootstrap components are not supported, BootyPrint brings some own components.
-
-- Box
+A lightweight Bootstrap alternative designed specifically for WeasyPrint.
 
 ## Installation
-
-### Using npm
-
-```bash
-npm install bootyprint
-```
 
 ### Manual download
 
@@ -59,29 +30,43 @@ This will generate both `bootyprint.css` and `bootyprint.min.css` in the `dist` 
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="path/to/bootyprint.css">
     <style>
         /* Custom variables for this template */
         :root {
             --primary: #3f51b5;
             --secondary: #2196f3;
-            --font-size-base: 12px;
+            --font-size-base: 11px;
+            --page-size: A4;
         }
     </style>
-   <link rel="stylesheet" href="path/to/bootyprint.css">
 </head>
 <body>
-    <!-- Your content here -->
+<!-- Your content here -->
 </body>
 </html>
 ```
 
-## Components
+## Features
+
+- Behavior changed to suit print media. No breakpoints, layout changed for fixed sizes
+- Supports variables and directives like `@page`
+
+### Bootstrap Features
+
+- Typography styling
+- Grid system
+- Layout components
+- Spacing utilities
+- Color utilities
+- Flexbox utilities
 
 ### Grid System
 
 BootyPrint includes a simplified 12-column grid system:
 
 ```html
+
 <div class="container">
     <div class="row">
         <div class="col-6">Half width</div>
@@ -105,6 +90,7 @@ Basic typography classes are available:
 Margin and padding utilities:
 
 ```html
+
 <div class="mt-3 mb-4 p-2">Spaced content</div>
 ```
 
@@ -113,20 +99,18 @@ Margin and padding utilities:
 Background and text color utilities:
 
 ```html
+
 <div class="bg-primary text-white">Colored box</div>
 ```
 
 ## Demo
 
-A demo page is available in the `demo` directory to showcase all the available components and utilities.
+A demo document is available in the `demo` directory to showcase all the available components and utilities.
 
-Since BootyPrint is a css framework for WeasyPrint, you need to use weasyprint in python to see the results.
+Since BootyPrint is a css framework for WeasyPrint, you need to use weasyprint in python to see the results. There is a npm script to install weasyprint and build the demo document.
 
 ```bash
-$ python -m venv .venv
-$ . .venv/bin/activate
-$ pip install weasyprint
-$ weasyprint demo/demo.html demo/demo.pdf
+$ npm run demo
 ```
 
 ## Contributing

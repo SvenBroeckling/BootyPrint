@@ -1,38 +1,63 @@
 // Borders
 @use 'variables' as vars;
 
+$side-map: (
+    top: top,
+    bottom: bottom,
+    start: left,
+    end: right
+);
+
+// border
 .border {
-  border-style: solid;
+    border-style: solid;
 }
 
-// Border
-
+// border-2
 @each $name, $value in vars.$border-width {
-  .border-#{$name} {
-    border-width: $value !important;
-  }
+    .border-#{$name} {
+        border-width: $value !important;
+    }
 }
+
+// border-bottom, border-start
+@each $name, $value in vars.$border-width {
+    .border-#{$name} {
+        border-#{$name}-style: solid !important;
+        border-#{$name}-width: vars.$border-width !important;
+    }
+}
+// border-bottom-1, border-start-2
+@each $width-name, $width-value in vars.$border-width {
+    @each $side-name, $side-value in $side-map {
+        .border-#{$side-name} {
+            border-#{$side-name}-style: solid !important;
+            border-#{$side-name}-width: $width-value !important;
+        }
+    }
+}
+
 
 // Border radius
 
 .rounded {
-  border-radius: vars.$border-radius;
+    border-radius: vars.$border-radius;
 }
 
 .rounded-circle {
-  border-radius: 50%;
+    border-radius: 50%;
 }
 
 @each $name, $value in vars.$border-radius-map {
-  .rounded-#{$name} {
-    border-radius: $value !important;
-  }
+    .rounded-#{$name} {
+        border-radius: $value !important;
+    }
 }
 
 // Border colors
 
 @each $name, $value in vars.$theme-colors {
-  .border-#{$name} {
-    border-color: $value !important;
-  }
+    .border-#{$name} {
+        border-color: $value !important;
+    }
 }
