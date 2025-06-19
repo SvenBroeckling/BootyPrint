@@ -49,7 +49,7 @@ This will generate both `bootyprint.css` and `bootyprint.min.css` in the `dist` 
 
 ## Features
 
-- Behavior changed to suit print media. No breakpoints, layout changed for fixed sizes
+- Behavior of Bootstrap classes changed to suit print media. No breakpoints, layout changed for fixed sizes
 - Supports variables and directives like `@page`
 
 ### Grid System
