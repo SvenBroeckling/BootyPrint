@@ -1,5 +1,5 @@
 // Color utilities
-@use '../variables' as vars;
+@use 'variables' as vars;
 
 // Text colors
 @each $name, $value in vars.$theme-colors {

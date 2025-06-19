@@ -5,10 +5,11 @@
   "main": "dist/bootyprint.css",
   "scripts": {
     "build": "npm run compile && npm run minify",
-    "compile": "sass src/scss/bootyprint.scss:dist/bootyprint.css --style expanded --no-source-map",
-    "minify": "sass src/scss/bootyprint.scss:dist/bootyprint.min.css --style compressed --no-source-map",
+    "compile": "sass src/bootyprint.scss:dist/bootyprint.css --style expanded --no-source-map",
+    "minify": "sass src/bootyprint.scss:dist/bootyprint.min.css --style compressed --no-source-map",
     "watch": "sass --watch src/scss/bootyprint.scss:dist/bootyprint.css --style expanded",
-    "dev": "npm run watch"
+    "dev": "npm run watch",
+    "demo": "python -m venv .venv && . .venv/bin/activate && npm run build && python -m pip install weasyprint && weasyprint demo/demo.html demo/demo.pdf"
   },
   "keywords": [
     "bootstrap",
