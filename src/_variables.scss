@@ -1,118 +1,120 @@
 @use "sass:math";
 
+// Function to get CSS variable with fallback to the default SCSS value
+@function css-var($property-name, $fallback) {
+  @return var(--#{$property-name}, $fallback);
+}
+
+// Note that all variables taken from css vars are
+// not used in calculations due to weasyprints
+// lack of calc() support
+
 // Colors
-$white: #fff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
-$gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
-$black: #000 !default;
+$white: css-var("white", #fff) !default;
+$gray-100: css-var("gray-100", #f8f9fa) !default;
+$gray-200: css-var("gray-200", #e9ecef) !default;
+$gray-300: css-var("gray-300", #dee2e6) !default;
+$gray-400: css-var("gray-400", #ced4da) !default;
+$gray-500: css-var("gray-500", #adb5bd) !default;
+$gray-600: css-var("gray-600", #6c757d) !default;
+$gray-700: css-var("gray-700", #495057) !default;
+$gray-800: css-var("gray-800", #343a40) !default;
+$gray-900: css-var("gray-900", #212529) !default;
+$black: css-var("black", #000) !default;
 
-$blue: #0d6efd !default;
-$indigo: #6610f2 !default;
-$purple: #6f42c1 !default;
-$pink: #d63384 !default;
-$red: #dc3545 !default;
-$orange: #fd7e14 !default;
-$yellow: #ffc107 !default;
-$green: #198754 !default;
-$teal: #20c997 !default;
-$cyan: #0dcaf0 !default;
+$blue: css-var("blue", #0d6efd) !default;
+$indigo: css-var("indigo", #6610f2) !default;
+$purple: css-var("purple", #6f42c1) !default;
+$pink: css-var("pink", #d63384) !default;
+$red: css-var("red", #dc3545) !default;
+$orange: css-var("orange", #fd7e14) !default;
+$yellow: css-var("yellow", #ffc107) !default;
+$green: css-var("green", #198754) !default;
+$teal: css-var("teal", #20c997) !default;
+$cyan: css-var("cyan", #0dcaf0) !default;
 
-$primary: $blue !default;
-$secondary: $gray-600 !default;
-$success: $green !default;
-$info: $cyan !default;
-$warning: $yellow !default;
-$danger: $red !default;
-$light: $gray-100 !default;
-$dark: $gray-900 !default;
-
-$theme-colors: (
-  "primary": $primary,
-  "secondary": $secondary,
-  "success": $success,
-  "info": $info,
-  "warning": $warning,
-  "danger": $danger,
-  "light": $light,
-  "dark": $dark,
-  "white": $white,
-  "transparent": transparent
-) !default;
+$primary: css-var("primary", $blue) !default;
+$secondary: css-var("secondary", $gray-600) !default;
+$success: css-var("success", $green) !default;
+$info: css-var("info", $cyan) !default;
+$warning: css-var("warning", $yellow) !default;
+$danger: css-var("danger", $red) !default;
+$light: css-var("light", $gray-100) !default;
+$dark: css-var("dark", $gray-900) !default;
 
 // Body
-$body-bg: $white !default;
-$body-color: $gray-900 !default;
+$body-bg: css-var("body-bg", $white) !default;
+$body-color: css-var("body-color", $gray-900) !default;
 
 // Page
-$page-size: 210mm 297mm !default; // A4
-$page-margin: 3mm 3mm 3mm 2mm !default;
+$page-size: css-var("page-size", 210mm 297mm) !default; // A4 by default
+$page-margin: css-var("page-margin", 3mm 3mm 3mm 2mm) !default;
 
 // Spacing
 $spacer: 1rem !default;
 $spacers: (
-  0: 0,
-  1: math.div($spacer, 4),
-  2: math.div($spacer, 2),
-  3: $spacer,
-  4: math.div($spacer * 3, 2),
-  5: $spacer * 3
+        0: 0,
+        1: math.div($spacer, 4),
+        2: math.div($spacer, 2),
+        3: $spacer,
+        4: math.div($spacer * 3, 2),
+        5: $spacer * 3
 ) !default;
 
 // Grid
-$grid-columns: 12 !default;
-$grid-gutter-width: 1.5rem !default;
+$grid-columns: css-var("grid-columns", 12) !default;
+$grid-gutter-width: css-var("grid-gutter-width", 1.5rem) !default;
 
 // Typography
-$font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
-$font-family-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
-$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-base: $font-family-serif !default;
-$font-family-headings: $font-family-sans-serif !default;
+$font-family-sans-serif: css-var("font-family-sans-serif", "system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif") !default;
+$font-family-serif: css-var("font-family-serif", "system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif") !default;
+$font-family-monospace: css-var("font-family-monospace", "SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace") !default;
+$font-family-base: css-var("font-family-base", $font-family-serif) !default;
+$font-family-headings: css-var("font-family-headings", $font-family-sans-serif) !default;
 
-$font-size-base: 11pt !default;
-$font-size-sm: math.div($font-size-base * 875, 1000) !default;
-$font-size-lg: math.div($font-size-base * 125, 100) !default;
+$font-size-base: css-var("font-size-base", 11pt) !default;
+$font-weight-normal: css-var("font-weight-normal", 400) !default;
+$font-weight-bold: css-var("font-weight-bold", 700) !default;
+$line-height-base: css-var("line-height-base", 1.5) !default;
 
-$font-weight-lighter: lighter !default;
-$font-weight-light: 300 !default;
-$font-weight-normal: 400 !default;
-$font-weight-bold: 700 !default;
-$font-weight-bolder: bolder !default;
+$font-size-base: css-var("font-size", 11pt) !default;
+$font-size-sm: css-var("font-size-sm", 9.62pt) !default;
+$font-size-lg: css-var("font-size-lg", 13.75pt) !default;
+
+$font-weight-lighter: css-var("font-weight-lighter", lighter) !default;
+$font-weight-light: css-var("font-weight-light", 300) !default;
+$font-weight-normal: css-var("font-weight-normal", 400) !default;
+$font-weight-bold: css-var("font-weight-bold", 700) !default;
+$font-weight-bolder: css-var("font-weight-bolder", bolder) !default;
 
 $line-height-base: 1.5 !default;
 $line-height-sm: 1.25 !default;
 $line-height-lg: 2 !default;
 
-$h1-font-size: math.div($font-size-base * 25, 10) !default;
-$h2-font-size: $font-size-base * 2 !default;
-$h3-font-size: math.div($font-size-base * 175, 100) !default;
-$h4-font-size: math.div($font-size-base * 15, 10) !default;
-$h5-font-size: math.div($font-size-base * 125, 100) !default;
-$h6-font-size: $font-size-base !default;
+$h1-font-size: css-var("h1-font-size", 27.5pt) !default;
+$h2-font-size: css-var("h2-font-size", 22pt) !default;
+$h3-font-size: css-var("h3-font-size", 19.25pt) !default;
+$h4-font-size: css-var("h4-font-size", 16.5pt) !default;
+$h5-font-size: css-var("h5-font-size", 13.75pt) !default;
+$h6-font-size: css-var("h6-font-size", 11pt) !default;
 
 $headings-margin-bottom: math.div($spacer, 2) !default;
-$headings-font-weight: 500 !default;
-$headings-line-height: 1.2 !default;
+$headings-font-weight: css-var("headings-font-weight", 500) !default;
+$headings-line-height: css-var("headings-line-height", 1.2) !default;
 
 // Display headings
 $display-font-sizes: (
-  1: 5rem,
-  2: 4.5rem,
-  3: 4rem,
-  4: 3.5rem
+        1: 5rem,
+        2: 4.5rem,
+        3: 4rem,
+        4: 3.5rem
 ) !default;
 
 $display-font-weight: 300 !default;
 $display-line-height: 1.2 !default;
 
 // Border radius
-$border-radius: 0.25rem !default;
-$border-radius-sm: 0.2rem !default;
-$border-radius-lg: 0.3rem !default;
+$border-radius: css-var("border-radius", 0.25rem) !default;
+$border-radius-sm: css-var("border-radius-sm", 0.2rem) !default;
+$border-radius-lg: css-var("border-radius-lg", 0.3rem) !default;
+
