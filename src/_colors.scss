@@ -1,15 +1,15 @@
-// Color utilities
 @use 'variables' as vars;
+@use 'maps' as maps;
 
 // Text colors
-@each $name, $value in vars.$theme-colors {
+@each $name, $value in maps.$theme-colors {
   .text-#{$name} {
     color: $value !important;
   }
 }
 
 // Background colors
-@each $name, $value in vars.$theme-colors {
+@each $name, $value in maps.$theme-colors {
   .bg-#{$name} {
     background-color: $value !important;
   }

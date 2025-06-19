@@ -1,0 +1,29 @@
+@use "variables" as vars;
+@use "maps" as maps;
+
+@each $name, $value in maps.$column-count-map {
+    .columns-#{$name} {
+        column-count: $value;
+    }
+    @each $gap-name, $gap-value in maps.$length-map {
+        .columns-#{$name}.gap-#{$gap-name} {
+            column-gap: $gap-value;
+        }
+        .columns-#{$name}.rule-#{$gap-name} {
+            column-rule-width: $gap-value;
+            column-rule-style: solid;
+        }
+    }
+
+    @each $border-name, $border-value in maps.$border-style-map {
+        .columns-#{$name}.rule-#{$border-name} {
+            column-rule-style: $border-value;
+        }
+    }
+
+    @each $color-name, $color-value in maps.$theme-colors {
+        .columns-#{$name}.rule-#{$color-name} {
+            column-rule-color: $color-value;
+        }
+    }
+}

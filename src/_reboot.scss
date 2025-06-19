@@ -4,28 +4,28 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-  font-family: sans-serif;
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
 }
 
 @page {
-  size: vars.$page-size;
-  margin: vars.$page-margin;
+    size: vars.$page-size;
+    margin: vars.$page-margin;
 }
 
 body {
-  margin: 0;
-  font-family: vars.$font-family-base;
-  font-size: vars.$font-size-base;
-  font-weight: vars.$font-weight-normal;
-  line-height: vars.$line-height-base;
-  color: vars.$body-color;
-  background-color: vars.$body-bg;
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    margin: 0;
+    font-family: vars.$font-family-base;
+    font-size: vars.$font-size-base;
+    font-weight: vars.$font-weight-normal;
+    line-height: vars.$line-height-base;
+    color: vars.$body-color;
+    background-color: vars.$body-bg;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }

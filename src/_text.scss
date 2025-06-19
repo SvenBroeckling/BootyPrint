@@ -18,6 +18,10 @@
   text-align: justify !important;
 }
 
+.text-hyphenate {
+    hyphens: auto;
+}
+
 // Transform
 .text-lowercase {
   text-transform: lowercase !important;

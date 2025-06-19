@@ -1,13 +1,7 @@
 // Borders
 @use 'sass:map';
 @use 'variables' as vars;
-
-$side-map: (
-    "top": "top",
-    "bottom": "bottom",
-    "start": "left",
-    "end": "right"
-);
+@use 'maps' as maps;
 
 // border
 .border {
@@ -15,26 +9,37 @@ $side-map: (
 }
 
 // border-2
-@each $name, $value in vars.$border-widths {
+@each $name, $value in maps.$border-width-map {
     .border-#{$name} {
         border-width: $value !important;
     }
 }
 
 // border-bottom, border-start
-@each $name, $value in $side-map {
+@each $name, $value in maps.$side-map {
     .border-#{$name} {
         border-#{$value}-style: solid !important;
         border-#{$value}-width: vars.$border-width !important;
     }
+
+    @each $color-name, $color-value in maps.$theme-colors {
+        .border-#{$name}.border-#{$color-name} {
+            border-#{$value}-color: #{$color-value} !important;
+        }
+    }
 }
 
 // border-bottom-1, border-start-2
-@each $width-name, $width-value in vars.$border-widths {
-    @each $side-name, $side-value in $side-map {
+@each $width-name, $width-value in maps.$border-width-map {
+    @each $side-name, $side-value in maps.$side-map {
         .border-#{$side-name}-#{$width-name} {
             border-#{$side-name}-style: solid !important;
             border-#{$side-name}-width: $width-value !important;
+        }
+        @each $color-name, $color-value in maps.$theme-colors {
+            .border-#{$side-name}-#{$width-name}.border-#{$color-name} {
+                border-#{$side-name}-color: #{$color-value} !important;
+            }
         }
     }
 }
@@ -50,7 +55,7 @@ $side-map: (
     border-radius: 50%;
 }
 
-@each $name, $value in vars.$border-radius-map {
+@each $name, $value in maps.$border-radius-map {
     .rounded-#{$name} {
         border-radius: $value !important;
     }
@@ -58,7 +63,7 @@ $side-map: (
 
 // Border colors
 
-@each $name, $value in vars.$theme-colors {
+@each $name, $value in maps.$theme-colors {
     .border-#{$name} {
         border-color: $value !important;
     }

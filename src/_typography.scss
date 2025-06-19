@@ -4,130 +4,117 @@
 @use 'sass:math';
 @use 'sass:map';
 
-// Typography mixins
-@mixin font-size($size) {
-  font-size: $size;
-}
-
-@mixin heading-style() {
-  margin-top: 0;
-  margin-bottom: vars.$headings-margin-bottom;
-  font-family: vars.$font-family-headings;
-  font-weight: vars.$headings-font-weight;
-  line-height: vars.$headings-line-height;
-}
-
-@mixin display-heading($size) {
-  font-size: map.get(vars.$display-font-sizes, $size);
-  font-weight: vars.$display-font-weight;
-  line-height: vars.$display-line-height;
-}
-
 // Headings
 h1, h2, h3, h4, h5, h6 {
-  @include heading-style();
+    margin-top: 0;
+    margin-bottom: vars.$headings-margin-bottom;
+    font-family: vars.$font-family-headings;
+    font-weight: vars.$headings-font-weight;
+    line-height: vars.$headings-line-height;
 }
 
 h1 {
-  font-size: vars.$h1-font-size;
+    font-size: vars.$h1-font-size;
 }
 
 h2 {
-  font-size: vars.$h2-font-size;
+    font-size: vars.$h2-font-size;
 }
 
 h3 {
-  font-size: vars.$h3-font-size;
+    font-size: vars.$h3-font-size;
 }
 
 h4 {
-  font-size: vars.$h4-font-size;
+    font-size: vars.$h4-font-size;
 }
 
 h5 {
-  font-size: vars.$h5-font-size;
+    font-size: vars.$h5-font-size;
 }
 
 h6 {
-  font-size: vars.$h6-font-size;
+    font-size: vars.$h6-font-size;
 }
 
 p {
-  margin-top: 0;
-  margin-bottom: 1rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
 }
 
 // Headings
 .h1 {
-  font-size: vars.$h1-font-size;
+    font-size: vars.$h1-font-size;
 }
 
 .h2 {
-  font-size: vars.$h2-font-size;
+    font-size: vars.$h2-font-size;
 }
 
 .h3 {
-  font-size: vars.$h3-font-size;
+    font-size: vars.$h3-font-size;
 }
 
 .h4 {
-  font-size: vars.$h4-font-size;
+    font-size: vars.$h4-font-size;
 }
 
 .h5 {
-  font-size: vars.$h5-font-size;
+    font-size: vars.$h5-font-size;
 }
 
 .h6 {
-  font-size: vars.$h6-font-size;
+    font-size: vars.$h6-font-size;
 }
 
 // Display headings
 @for $i from 1 through 4 {
-  .display-#{$i} {
-    @include display-heading($i);
-  }
+    .display-#{$i} {
+        font-size: map.get(vars.$display-font-sizes, $i);
+        font-weight: vars.$display-font-weight;
+        line-height: vars.$display-line-height;
+    }
 }
 
 // Lead
 .lead {
-  font-size: vars.$font-size-lg;
-  font-weight: 300;
+    font-size: vars.$font-size-lg;
+    font-weight: 300;
 }
 
 // Lists
 ol,
 ul,
 dl {
-  margin-top: 0;
-  margin-bottom: 1rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
 }
 
 ol ol,
 ul ul,
 ol ul,
 ul ol {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 // Links
 a {
-  color: vars.$link-color;
-  text-decoration: vars.$link-decoration;
+    color: vars.$link-color;
+    text-decoration: vars.$link-decoration;
 
-  &:hover {
-    color: vars.$link-hover-color;
-    text-decoration: vars.$link-hover-decoration;
-  }
+    &:hover {
+        color: vars.$link-hover-color;
+        text-decoration: vars.$link-hover-decoration;
+    }
 }
 
 // Images
 img {
-  vertical-align: middle;
-  border-style: none;
+    vertical-align: middle;
+    border-style: none;
 }
 
 .img-fluid {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
 }

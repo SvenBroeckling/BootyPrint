@@ -1,0 +1,78 @@
+@use 'variables' as vars;
+@use 'sass:math';
+
+$theme-colors: (
+    "primary": vars.$primary,
+    "secondary": vars.$secondary,
+    "success": vars.$success,
+    "info": vars.$info,
+    "warning": vars.$warning,
+    "danger": vars.$danger,
+    "light": vars.$light,
+    "white": vars.$white,
+    "black": vars.$black,
+    "dark": vars.$dark,
+    "teal": vars.$teal,
+    "indigo": vars.$indigo,
+    "purple": vars.$purple,
+    "pink": vars.$pink,
+    "orange": vars.$orange,
+    "yellow": vars.$yellow,
+    "red": vars.$red,
+    "cyan": vars.$cyan,
+);
+
+$border-width-map: (
+    1: 1px,
+    2: 2px,
+    3: 3px,
+    4: 4px,
+    5: 5px
+) !default;
+
+$border-radius-map: (
+    1: vars.$border-radius-sm,
+    2: vars.$border-radius,
+    3: vars.$border-radius-lg,
+    4: vars.$border-radius-xl,
+    5: vars.$border-radius-xxl,
+    6: vars.$border-radius-pill
+) !default;
+
+$side-map: (
+    "top": "top",
+    "bottom": "bottom",
+    "start": "left",
+    "end": "right"
+);
+
+$length-map: (
+    0: 0,
+    1: math.div(vars.$spacer, 4),
+    2: math.div(vars.$spacer, 2),
+    3: vars.$spacer,
+    4: math.div(vars.$spacer * 3, 2),
+    5: vars.$spacer * 3
+) !default;
+
+$column-count-map: (
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 5,
+    6: 6
+) !default;
+
+$border-style-map: (
+    "dotted": "dotted",
+    "dashed": "dashed",
+    "solid": "solid",
+    "double": "double",
+    "groove": "groove",
+    "ridge": "ridge",
+    "inset": "inset",
+    "outset": "outset",
+    "none": "none"
+) !default;
+

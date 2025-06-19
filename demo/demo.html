@@ -152,7 +152,7 @@
     <!-- Border -->
     <div class="mb-4 p-3 border border-1 border-black rounded-2 page-break-avoid">
         <h2 class="mb-3 pb-2 border-bottom">Border</h2>
-        <div class="d-flex justify-content-between gap-3 p-3">
+        <div class="d-flex flex-wrap justify-content-between gap-3 p-3">
             <div class="bg-light center-middle border-top" style="height: 3cm; width: 3cm;">
                 Top Border
             </div>
@@ -165,6 +165,18 @@
             <div class="bg-light center-middle border-start" style="height: 3cm; width: 3cm;">
                 Start Border
             </div>
+            <div class="bg-light center-middle border border-2 border-primary" style="height: 3cm; width: 3cm;">
+                Primary Border
+            </div>
+            <div class="bg-light center-middle border border-2 border-danger" style="height: 3cm; width: 3cm;">
+                Danger Border
+            </div>
+            <div class="bg-light center-middle border border-2 border-warning" style="height: 3cm; width: 3cm;">
+                Warning Border
+            </div>
+            <div class="bg-light center-middle border border-2 border-success" style="height: 3cm; width: 3cm;">
+                Success Border
+            </div>
         </div>
     </div>
 
@@ -176,30 +188,50 @@
             <div class="card w-25">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
-            <div class="card w-25">
+
+            <div class="card card-success w-25">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
+                    <h5 class="card-title">Success Card</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
-            <div class="card w-25">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+
+            <div class="card card-inlay w-25">
+                <div class="card-body center-middle text-center">
+                    <h5 class="card-title">Inlay Title</h5>
+                    <p class="card-text">This card has in inlay title.</p>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Columns -->
+    <div class="mb-4 p-3 border border-1 border-black rounded-2 page-break-avoid">
+        <h2 class="mb-3 pb-2 border-bottom">Columns</h2>
+
+        <div class="columns-3">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad doloremque error explicabo facilis fugiat officiis placeat provident quos, sed tempora! Ad dolorum earum fuga itaque modi nemo officiis quibusdam vero.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id magni quaerat repellat tempore? Ad cupiditate deserunt dicta eos harum itaque iusto molestiae mollitia natus pariatur quis quos, repellendus, rerum soluta!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, asperiores, autem consequatur delectus doloremque doloribus dolorum eaque eligendi eos expedita fuga harum hic id impedit ipsam iure, iusto, laboriosam, magnam.
+            </p>
+        </div>
+
+        <hr>
+
+        <div class="columns-2 gap-5 rule-medium rule-primary text-justify text-hyphenate mt-3">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad doloremque error explicabo facilis fugiat officiis placeat provident quos, sed tempora! Ad dolorum earum fuga itaque modi nemo officiis quibusdam vero.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id magni quaerat repellat tempore? Ad cupiditate deserunt dicta eos harum itaque iusto molestiae mollitia natus pariatur quis quos, repellendus, rerum soluta!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, asperiores, autem consequatur delectus doloremque doloribus dolorum eaque eligendi eos expedita fuga harum hic id impedit ipsam iure, iusto, laboriosam, magnam.
+            </p>
+        </div>
+    </div>
 </div>
 </body>
 </html>

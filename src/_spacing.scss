@@ -1,10 +1,11 @@
 // Margin and padding utilities
 @use 'variables' as vars;
+@use 'maps' as maps;
 @use 'sass:math';
 
 // Spacing mixin
 @mixin generate-spacing-utilities($property, $abbrev) {
-  @each $size, $value in vars.$spacers {
+  @each $size, $value in maps.$length-map{
     // All sides
     .#{$abbrev}-#{$size} {
       #{$property}: $value !important;

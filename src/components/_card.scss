@@ -1,4 +1,5 @@
 @use "../variables" as vars;
+@use "../maps" as maps;
 
 .card {
     padding: 1rem;
@@ -8,12 +9,30 @@
     flex-direction: column;
 }
 
+@each $color-name, $color-value in maps.$theme-colors {
+    .card-#{$color-name} {
+        border-color: $color-value;
+    }
+}
+.card.card-inlay {
+    position: relative;
+}
+
 .card-body {
     flex: 1 1 auto;
 }
 
 .card-title {
     margin-bottom: 0.75rem;
+}
+
+.card.card-inlay .card-title {
+    position: absolute;
+    top: -0.6rem;
+    left: 0.7rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    background-color: vars.$body-bg;
 }
 
 .card-subtitle {

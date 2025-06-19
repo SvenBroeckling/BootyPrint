@@ -1,18 +1,10 @@
 // Flex utilities
 @use 'variables' as vars;
+@use 'maps' as maps;
 
 // Gap
 
-$gap-map: (
-0: 0,
-    1: 0.25rem,
-    2: 0.5rem,
-    3: 1rem,
-    4: 1.5rem,
-    5: 3rem
-) !default;
-
-@each $name, $value in $gap-map {
+@each $name, $value in maps.$length-map {
     .d-flex.gap-#{$name} {
         gap: $value !important;
     }

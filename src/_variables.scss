@@ -42,27 +42,6 @@ $danger: css-var("danger", $red) !default;
 $light: css-var("light", $gray-100) !default;
 $dark: css-var("dark", $gray-900) !default;
 
-$theme-colors: (
-    "primary": $primary,
-    "secondary": $secondary,
-    "success": $success,
-    "info": $info,
-    "warning": $warning,
-    "danger": $danger,
-    "light": $light,
-    "white": $white,
-    "black": $black,
-    "dark": $dark,
-    "teal": $teal,
-    "indigo": $indigo,
-    "purple": $purple,
-    "pink": $pink,
-    "orange": $orange,
-    "yellow": $yellow,
-    "red": $red,
-    "cyan": $cyan,
-);
-
 // Body
 $body-bg: css-var("body-bg", $white) !default;
 $body-color: css-var("body-color", $black) !default;
@@ -73,14 +52,6 @@ $page-margin: css-var("page-margin", 3mm 3mm 3mm 2mm) !default;
 
 // Spacing
 $spacer: 1rem !default;
-$spacers: (
-    0: 0,
-    1: math.div($spacer, 4),
-    2: math.div($spacer, 2),
-    3: $spacer,
-    4: math.div($spacer * 3, 2),
-    5: $spacer * 3
-) !default;
 
 // Links
 $link-color: css-var("link-color", $primary) !default;
@@ -134,13 +105,6 @@ $headings-line-height: css-var("headings-line-height", 1.2) !default;
 // scss-docs-start border-variables
 
 $border-width: 1px !default;
-$border-widths: (
-    1: 1px,
-    2: 2px,
-    3: 3px,
-    4: 4px,
-    5: 5px
-) !default;
 $border-style: solid !default;
 $border-color: $gray-300 !default;
 
@@ -150,15 +114,6 @@ $border-radius-lg: .5rem !default;
 $border-radius-xl: 1rem !default;
 $border-radius-xxl: 2rem !default;
 $border-radius-pill: 50rem !default;
-
-$border-radius-map: (
-    1: $border-radius-sm,
-    2: $border-radius,
-    3: $border-radius-lg,
-    4: $border-radius-xl,
-    5: $border-radius-xxl,
-    6: $border-radius-pill
-) !default;
 
 $box-shadow: 0 .5rem 1rem rgba($black, .15) !default;
 $box-shadow-sm: 0 .125rem .25rem rgba($black, .075) !default;

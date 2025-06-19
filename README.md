@@ -115,7 +115,6 @@ Sizing utilities:
 <div class="h-25">Quarter height</div>
 ```
 
-
 ### Colors
 
 Background and text color utilities:
@@ -133,6 +132,48 @@ Basic bootstrap border classes:
 
 <div class="border border-2 rounded">Rouned border</div>
 <div class="border-start">Border left</div>
+```
+
+### Columns
+
+CSS Columns:
+
+```html
+
+<div class="columns-3">
+    <p>
+        Lorem ipsum dolor sit...
+    </p>
+</div>
+
+<div class="columns-2 gap-5 rule-medium rule-primary text-justify text-hyphenate">
+    <p>
+        Lorem ipsum dolor sit...
+    </p>
+</div>
+
+```
+
+### Card Component
+
+A card component:
+
+```html
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+    <div class="card card-inlay">
+        <div class="card-body center-middle text-center">
+            <h5 class="card-title">Inlay Title</h5>
+            <p class="card-text">This card has in inlay title.</p>
+        </div>
+    </div>
+</div>
+
 ```
 
 ## Demo
