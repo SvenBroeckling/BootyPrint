@@ -1,11 +1,12 @@
 // Borders
+@use 'sass:map';
 @use 'variables' as vars;
 
 $side-map: (
-    top: top,
-    bottom: bottom,
-    start: left,
-    end: right
+    "top": "top",
+    "bottom": "bottom",
+    "start": "left",
+    "end": "right"
 );
 
 // border
@@ -14,23 +15,24 @@ $side-map: (
 }
 
 // border-2
-@each $name, $value in vars.$border-width {
+@each $name, $value in vars.$border-widths {
     .border-#{$name} {
         border-width: $value !important;
     }
 }
 
 // border-bottom, border-start
-@each $name, $value in vars.$border-width {
+@each $name, $value in $side-map {
     .border-#{$name} {
-        border-#{$name}-style: solid !important;
-        border-#{$name}-width: vars.$border-width !important;
+        border-#{$value}-style: solid !important;
+        border-#{$value}-width: vars.$border-width !important;
     }
 }
+
 // border-bottom-1, border-start-2
-@each $width-name, $width-value in vars.$border-width {
+@each $width-name, $width-value in vars.$border-widths {
     @each $side-name, $side-value in $side-map {
-        .border-#{$side-name} {
+        .border-#{$side-name}-#{$width-name} {
             border-#{$side-name}-style: solid !important;
             border-#{$side-name}-width: $width-value !important;
         }

@@ -1,6 +1,30 @@
 // Flex utilities
 @use 'variables' as vars;
 
+// Gap
+
+$gap-map: (
+0: 0,
+    1: 0.25rem,
+    2: 0.5rem,
+    3: 1rem,
+    4: 1.5rem,
+    5: 3rem
+) !default;
+
+@each $name, $value in $gap-map {
+    .d-flex.gap-#{$name} {
+        gap: $value !important;
+    }
+}
+
+// Center Middle
+.center-middle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 // Direction
 .flex-row {
   flex-direction: row !important;

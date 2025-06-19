@@ -1,0 +1,22 @@
+@use "../variables" as vars;
+
+.card {
+    padding: 1rem;
+    border: 1px solid vars.$black;
+    border-radius: 0.25rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body {
+    flex: 1 1 auto;
+}
+
+.card-title {
+    margin-bottom: 0.75rem;
+}
+
+.card-subtitle {
+    margin-top: -0.25rem;
+    margin-bottom: 0;
+}

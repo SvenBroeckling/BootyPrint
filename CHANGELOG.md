@@ -36,4 +36,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-none
+### Added
+- Added card component
+
+### Changed
+- Fixed the generation of border-radius css

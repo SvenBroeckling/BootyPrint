@@ -135,11 +135,11 @@ $headings-line-height: css-var("headings-line-height", 1.2) !default;
 
 $border-width: 1px !default;
 $border-widths: (
-    1: 1pt,
-    2: 2pt,
-    3: 3pt,
-    4: 4pt,
-    5: 5pt
+    1: 1px,
+    2: 2px,
+    3: 3px,
+    4: 4px,
+    5: 5px
 ) !default;
 $border-style: solid !default;
 $border-color: $gray-300 !default;
