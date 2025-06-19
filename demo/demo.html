@@ -9,27 +9,20 @@
         :root {
             --primary: #3f51b5;
             --secondary: #2196f3;
-            --font-size-base: 14px;
-            --page-size: A5 landscape;
-            --body-bg: black;
+            --font-size-base: 11px;
+            --page-size: A4;
         }
 
-        body {
-            padding: 20px;
-        }
+        /*.demo-section {*/
+        /*    border: 1px solid var(--gray-300);*/
+        /*    border-radius: var(--border-radius);*/
+        /*}*/
 
-        .demo-section {
-            margin-bottom: 30px;
-            padding: 20px;
-            border: 1px solid var(--gray-300);
-            border-radius: var(--border-radius);
-        }
-
-        .demo-title {
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid var(--gray-300);
-        }
+        /*.demo-title {*/
+        /*    margin-bottom: 15px;*/
+        /*    padding-bottom: 10px;*/
+        /*    border-bottom: 1px solid var(--gray-300);*/
+        /*}*/
 
         .color-box {
             padding: 15px;
@@ -38,14 +31,15 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1 class="mb-4">BootyPrint Demo</h1>
-        <p class="lead mb-4">This page demonstrates the features of BootyPrint, a lightweight Bootstrap alternative designed specifically for WeasyPrint.</p>
+        <p class="lead mb-4">This document demonstrates the features of BootyPrint, a lightweight Bootstrap alternative designed specifically for WeasyPrint.</p>
 
         <!-- Typography -->
-        <div class="demo-section">
-            <h2 class="demo-title">Typography</h2>
+        <div class="mb-4 p-5 border border-1 border-black rounded-2">
+            <h2 class="mb-1 pb-1">Typography</h2>
 
             <h1>Heading 1</h1>
             <h2>Heading 2</h2>
@@ -70,9 +64,10 @@
         </div>
 
         <div style="page-break-after: always"></div>
+
         <!-- Grid System -->
-        <div class="demo-section">
-            <h2 class="demo-title">Grid System</h2>
+        <div class="mb-4 p-5 border border-1 border-black rounded-2">
+            <h2 class="mb-1 pb-1">Grid System</h2>
 
             <div class="row mb-3">
                 <div class="col-12">
@@ -118,8 +113,8 @@
         </div>
 
         <!-- Colors -->
-        <div class="demo-section">
-            <h2 class="demo-title">Colors</h2>
+        <div class="mb-4 p-5 border border-1 border-black rounded-2">
+            <h2 class="mb-1 pb-1">Colors</h2>
 
             <div class="color-box bg-primary text-white">Primary</div>
             <div class="color-box bg-secondary text-white">Secondary</div>
@@ -132,8 +127,8 @@
         </div>
 
         <!-- Spacing -->
-        <div class="demo-section">
-            <h2 class="demo-title">Spacing</h2>
+        <div class="mb-4 p-5 border border-1 border-black rounded-2">
+            <h2 class="mb-1 pb-1">Spacing</h2>
 
             <p>The box below has <code>p-3 mb-4</code> classes (padding 3, margin-bottom 4):</p>
             <div class="bg-light p-3 mb-4">This box has padding 3 and margin-bottom 4</div>
@@ -143,8 +138,8 @@
         </div>
 
         <!-- Flex -->
-        <div class="demo-section">
-            <h2 class="demo-title">Flex</h2>
+        <div class="mb-4 p-5 border border-1 border-black rounded-2">
+            <h2 class="mb-1 pb-1">Flex</h2>
 
             <p>Justify content between:</p>
             <div class="d-flex justify-content-between mb-3">

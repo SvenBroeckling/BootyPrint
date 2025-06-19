@@ -9,7 +9,7 @@
     "minify": "sass src/bootyprint.scss:dist/bootyprint.min.css --style compressed --no-source-map",
     "watch": "sass --watch src/bootyprint.scss:dist/bootyprint.css --style expanded",
     "dev": "npm run watch",
-    "demo": "python -m venv .venv && . .venv/bin/activate && npm run build && python -m pip install weasyprint && weasyprint -vd demo/demo.html demo/demo.pdf && weasyprint -vd demo/css-variables-guide.html demo/css-variables-guide.pdf"
+    "demo": "python -m venv .venv && . .venv/bin/activate && npm run build && python -m pip install weasyprint && weasyprint -v demo/demo.html demo/demo.pdf && weasyprint -v demo/css-variables-guide.html demo/css-variables-guide.pdf"
   },
   "keywords": [
     "bootstrap",

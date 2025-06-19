@@ -112,12 +112,12 @@ ul ol {
 
 // Links
 a {
-  color: vars.$primary;
-  text-decoration: none;
+  color: vars.$link-color;
+  text-decoration: vars.$link-decoration;
 
   &:hover {
-    color: color.scale(vars.$primary, $lightness: -15%);
-    text-decoration: underline;
+    color: vars.$link-hover-color;
+    text-decoration: vars.$link-hover-decoration;
   }
 }
 

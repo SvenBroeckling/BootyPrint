@@ -1,0 +1,38 @@
+// Borders
+@use 'variables' as vars;
+
+.border {
+  border-style: solid;
+}
+
+// Border
+
+@each $name, $value in vars.$border-width {
+  .border-#{$name} {
+    border-width: $value !important;
+  }
+}
+
+// Border radius
+
+.rounded {
+  border-radius: vars.$border-radius;
+}
+
+.rounded-circle {
+  border-radius: 50%;
+}
+
+@each $name, $value in vars.$border-radius-map {
+  .rounded-#{$name} {
+    border-radius: $value !important;
+  }
+}
+
+// Border colors
+
+@each $name, $value in vars.$theme-colors {
+  .border-#{$name} {
+    border-color: $value !important;
+  }
+}
