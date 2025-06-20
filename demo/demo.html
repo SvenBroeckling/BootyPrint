@@ -16,6 +16,7 @@
     </style>
 </head>
 
+
 <body>
 <div class="container">
     <h1 class="mb-4">BootyPrint Demo</h1>
@@ -48,7 +49,17 @@
         <p class="text-muted">Muted text</p>
     </div>
 
-    <div style="page-break-after: always"></div>
+    <!-- Spacing -->
+    <div class="mb-4 p-3 border border-1 border-black rounded-2 page-break-avoid">
+        <h2 class="mb-3 pb-2 border-bottom">Spacing</h2>
+
+        <p>The box below has <code>p-3 mb-4</code> classes (padding 3, margin-bottom 4):</p>
+        <div class="bg-light p-3 mb-4">This box has padding 3 and margin-bottom 4</div>
+
+        <p>The box below has <code>px-4 py-2 mt-3</code> classes (padding-x 4, padding-y 2, margin-top 3):</p>
+        <div class="bg-light px-4 py-2 mt-3">This box has horizontal padding 4, vertical padding 2, and margin-top 3
+        </div>
+    </div>
 
     <!-- Grid System -->
     <div class="mb-4 p-3 border border-1 border-black rounded-2 page-break-avoid">
@@ -109,18 +120,6 @@
         <div class="p-3 mb-2 rounded-1 bg-info">Info</div>
         <div class="p-3 mb-2 rounded-1 bg-light">Light</div>
         <div class="p-3 mb-2 rounded-1 bg-dark text-white">Dark</div>
-    </div>
-
-    <!-- Spacing -->
-    <div class="mb-4 p-3 border border-1 border-black rounded-2 page-break-avoid">
-        <h2 class="mb-3 pb-2 border-bottom">Spacing</h2>
-
-        <p>The box below has <code>p-3 mb-4</code> classes (padding 3, margin-bottom 4):</p>
-        <div class="bg-light p-3 mb-4">This box has padding 3 and margin-bottom 4</div>
-
-        <p>The box below has <code>px-4 py-2 mt-3</code> classes (padding-x 4, padding-y 2, margin-top 3):</p>
-        <div class="bg-light px-4 py-2 mt-3">This box has horizontal padding 4, vertical padding 2, and margin-top 3
-        </div>
     </div>
 
     <!-- Flex -->
