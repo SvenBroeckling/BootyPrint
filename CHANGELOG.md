@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Released]
 
+### [0.0.9]
+
+#### Changed
+- Apply negative magin and padding to grid
+
 ### [0.0.8]
 
 #### Added
