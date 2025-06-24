@@ -61,7 +61,7 @@ $link-hover-decoration: css-var("link-hover-decoration", underline) !default;
 
 // Grid
 $grid-columns: 12 !default;
-$grid-gutter-width: 1.5rem !default;
+$grid-gutter-width: 1rem !default;
 
 // Typography
 $font-family-sans-serif: css-var("font-family-sans-serif", "sans-serif") !default;
@@ -74,8 +74,6 @@ $font-size-base: css-var("font-size-base", 11pt) !default;
 $font-weight-normal: css-var("font-weight-normal", 400) !default;
 $font-weight-bold: css-var("font-weight-bold", 700) !default;
 $line-height-base: css-var("line-height-base", 1.5) !default;
-
-$font-size-base: css-var("font-size", 11pt) !default;
 $font-size-sm: css-var("font-size-sm", 9.62pt) !default;
 $font-size-lg: css-var("font-size-lg", 13.75pt) !default;
 
@@ -130,9 +128,3 @@ $display-font-sizes: (
 
 $display-font-weight: 300 !default;
 $display-line-height: 1.2 !default;
-
-// Border radius
-$border-radius: css-var("border-radius", 0.25rem) !default;
-$border-radius-sm: css-var("border-radius-sm", 0.2rem) !default;
-$border-radius-lg: css-var("border-radius-lg", 0.3rem) !default;
-

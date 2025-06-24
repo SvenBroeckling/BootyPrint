@@ -2,20 +2,43 @@
 @use "../maps" as maps;
 
 .card {
-    padding: 1rem;
+    position: relative;
+    display: flex;
+    padding: 0.5rem;
+    flex-direction: column;
     border: 1px solid vars.$black;
     border-radius: 0.25rem;
-    display: flex;
-    flex-direction: column;
+    min-width: 0;
+    width: 100%;
+
+    > hr {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+      > .list-group {
+    border-top: inherit;
+    border-bottom: inherit;
+
+    &:first-child {
+      border-top-width: 0;
+    }
+
+    &:last-child  {
+      border-bottom-width: 0;
+    }
+  }
+
+  > .card-header + .list-group,
+  > .list-group + .card-footer {
+    border-top: 0;
+  }
 }
 
 @each $color-name, $color-value in maps.$theme-colors {
     .card-#{$color-name} {
         border-color: $color-value;
     }
-}
-.card.card-inlay {
-    position: relative;
 }
 
 .card-body {
@@ -28,8 +51,9 @@
 
 .card.card-inlay .card-title {
     position: absolute;
-    top: -0.6rem;
-    left: 0.7rem;
+    top: -0.5rem;
+    left: 0.5rem;
+    font-size: vars.$font-size-sm;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     background-color: vars.$body-bg;

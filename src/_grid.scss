@@ -5,7 +5,6 @@
 // Grid mixins
 @mixin make-col-ready() {
     position: relative;
-    width: 100%;
     padding-right: math.div(vars.$grid-gutter-width, 2);
     padding-left: math.div(vars.$grid-gutter-width, 2);
 }
