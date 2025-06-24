@@ -161,19 +161,95 @@ A card component:
 ```html
 
 <div class="card">
+    <h5 class="card-title">Card title</h5>
     <div class="card-body">
-        <h5 class="card-title">Card title</h5>
         <p class="card-text">Some quick example text.</p>
         <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
+    
     <div class="card card-inlay">
+        <h5 class="card-title">Inlay Title</h5>
         <div class="card-body center-middle text-center">
-            <h5 class="card-title">Inlay Title</h5>
             <p class="card-text">This card has in inlay title.</p>
         </div>
     </div>
 </div>
 
+```
+
+### Tables
+
+BootyPrint includes various table styles:
+
+```html
+<!-- Basic Table -->
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>John Doe</td>
+      <td>john@example.com</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Jane Smith</td>
+      <td>jane@example.com</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Striped Table -->
+<table class="table table-striped">
+  <caption>Striped Rows Table</caption>
+  <!-- Table content... -->
+</table>
+
+<!-- Underlined Table -->
+<table class="table table-underline">
+  <caption>Table with Underlined Rows</caption>
+  <!-- Table content... -->
+</table>
+
+<!-- Bordered Table -->
+<table class="table table-bordered">
+  <caption>Fully Bordered Table</caption>
+  <!-- Table content... -->
+</table>
+
+<!-- Dotted Border Style -->
+<table class="table table-bordered table-dotted">
+  <caption>Table with Dotted Borders</caption>
+  <!-- Table content... -->
+</table>
+
+<!-- Combining Styles -->
+<table class="table table-striped table-underline table-compact">
+  <caption>Compact Striped Table with Underlines</caption>
+  <!-- Table content... -->
+</table>
+
+<!-- Colored Table -->
+<table class="table table-primary">
+  <caption>Primary-Colored Table</caption>
+  <!-- Table content... -->
+</table>
+```
+
+Table classes can be customized via CSS variables:
+
+```css
+:root {
+  --table-cell-padding-y: 0.75rem;
+  --table-border-color: #333;
+  --table-striped-bg: rgba(0, 123, 255, 0.1);
+}
 ```
 
 ## Demo

@@ -1,0 +1,150 @@
+@use 'variables' as vars;
+@use 'maps' as maps;
+
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: vars.$spacer;
+    page-break-inside: auto;
+    border-collapse: collapse;
+    font-size: vars.$table-font-size;
+    color: vars.$body-color;
+
+    border-spacing: 0;
+
+    tr {
+        page-break-inside: avoid;
+        page-break-after: auto;
+    }
+
+    th,
+    td {
+        padding: vars.$table-cell-padding-y vars.$table-cell-padding-x;
+        vertical-align: top;
+        text-align: left;
+    }
+
+    tfoot {
+        display: table-footer-group;
+    }
+
+    thead {
+        display: table-header-group;
+        th {
+            vertical-align: bottom;
+            font-weight: vars.$font-weight-bold;
+            border-bottom: calc(#{vars.$table-border-width} * 2) vars.$table-border-style vars.$table-border-color;
+        }
+    }
+
+    caption {
+        padding-top: vars.$table-caption-spacing;
+        padding-bottom: vars.$table-caption-spacing;
+        color: vars.$table-caption-color;
+        text-align: left;
+        caption-side: bottom;
+    }
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+.table-bordered {
+    border: vars.$table-border-width vars.$table-border-style vars.$table-border-color;
+
+    th,
+    td {
+        border: vars.$table-border-width vars.$table-border-style vars.$table-border-color;
+    }
+
+    thead th,
+    thead td {
+        border-bottom-width: calc(#{vars.$table-border-width} * 2);
+    }
+}
+
+.table-underline {
+    th,
+    td {
+        border-bottom: vars.$table-border-width vars.$table-border-style vars.$table-border-color;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+    }
+
+    thead th {
+        border-bottom-width: calc(#{vars.$table-border-width} * 2);
+    }
+}
+
+.table-striped {
+    tbody tr:nth-of-type(odd) {
+        background-color: vars.$table-striped-bg;
+    }
+}
+
+.table-dotted {
+    th,
+    td {
+        border-style: dotted;
+    }
+
+    &.table-bordered {
+        border-style: dotted;
+    }
+}
+
+.table-dashed {
+    th,
+    td {
+        border-style: dashed;
+    }
+
+    &.table-bordered {
+        border-style: dashed;
+    }
+}
+
+.table-compact {
+    font-size: 90% !important;
+
+    th,
+    td {
+        padding: calc(#{vars.$table-cell-padding-y} / 2) calc(#{vars.$table-cell-padding-x} / 2);
+    }
+}
+
+.table-align-middle {
+    th,
+    td {
+        vertical-align: middle;
+    }
+}
+
+.table-auto {
+    width: auto;
+}
+
+@each $color, $value in maps.$theme-colors {
+    .table-#{$color} {
+        --table-accent-bg: #{rgba($value, 0.1)};
+        background-color: var(--table-accent-bg);
+        color: vars.css-var("table-#{$color}-color", contrast-color($value));
+
+        th,
+        td,
+        thead th {
+            border-color: rgba($value, 0.2);
+        }
+    }
+}
+
+@function contrast-color($background) {
+    @if (lightness($background) > 60) {
+        @return vars.$black;
+    } @else {
+        @return vars.$white;
+    }
+}

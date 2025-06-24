@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Released]
 
+### [0.0.10]
+
 ### [0.0.9]
 
 #### Changed
@@ -59,6 +61,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### [Unreleased]
 
 #### Added
+- Added list-group component
+- Added table components with multiple styling options (basic, bordered, underlined, striped, dotted, dashed)
 
 #### Changed
 - Made the inlay title of cards smaller
+
+#### Fixed
+- Fixed grid system to work properly with WeasyPrint by removing negative padding on container and adjusting row margins
+
