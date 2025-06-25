@@ -24,6 +24,10 @@ This will generate both `bootyprint.css` and `bootyprint.min.css` in the `dist` 
 
 ## Usage
 
+### Work in progress
+
+The semantics of the BootyPrint classes, particularly those of the more complex components, are not yet stable and may change with every version. While each change will be logged in the CHANGELOG, you should expect the classes to change. However, the initial class structure will be largely stable by version 0.1.0.
+
 ### In HTML
 
 ```html
@@ -49,8 +53,9 @@ This will generate both `bootyprint.css` and `bootyprint.min.css` in the `dist` 
 
 ## Features
 
-- Behavior of Bootstrap classes changed to suit print media. No breakpoints, layout changed for fixed sizes
-- Supports variables and directives like `@page`
+The idea behind BootyStrap is to create a CSS library that behaves like Bootstrap but is designed for print media. Consequently, BootyPrint lacks all the interactive features of Bootstrap, such as accordions and navbars, and there are no breakpoints.
+
+BootyStrap is designed for WeasyPrint and is tailored to its capabilities. If you use a different HTML-to-PDF rendering engine, you may get different results.
 
 ### Grid System
 

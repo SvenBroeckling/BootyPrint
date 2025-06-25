@@ -5,6 +5,7 @@
     .columns-#{$name} {
         column-count: $value;
     }
+
     @each $gap-name, $gap-value in maps.$length-map {
         .columns-#{$name}.gap-#{$gap-name} {
             column-gap: $gap-value;
