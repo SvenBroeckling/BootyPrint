@@ -1,0 +1,32 @@
+/* Absolute positioning and lengths */
+@use 'maps' as maps;
+
+.position-absolute {
+    position: absolute !important;
+}
+.position-relative {
+    position: relative !important;
+}
+
+@for $length from 0 through 600 {
+    @each $unit, $unit-name in maps.$absolute-unit-map {
+        .top-#{$length}#{$unit} {
+            top: #{$length}#{$unit} !important;
+        }
+        .bottom-#{$length}#{$unit} {
+            bottom: #{$length}#{$unit} !important;
+        }
+        .start-#{$length}#{$unit} {
+            left: #{$length}#{$unit} !important;
+        }
+        .end-#{$length}#{$unit} {
+            right: #{$length}#{$unit} !important;
+        }
+        .width-#{$length}#{$unit} {
+            width: #{$length}#{$unit} !important;
+        }
+        .height-#{$length}#{$unit} {
+            height: #{$length}#{$unit} !important;
+        }
+    }
+}

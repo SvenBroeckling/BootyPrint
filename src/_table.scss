@@ -142,24 +142,3 @@
     width: auto;
 }
 
-@each $color, $value in maps.$theme-colors {
-    .table-#{$color} {
-        --table-accent-bg: #{rgba($value, 0.1)};
-        background-color: var(--table-accent-bg);
-        color: vars.css-var("table-#{$color}-color", contrast-color($value));
-
-        th,
-        td,
-        thead th {
-            border-color: rgba($value, 0.2);
-        }
-    }
-}
-
-@function contrast-color($background) {
-    @if (lightness($background) > 60) {
-        @return vars.$black;
-    } @else {
-        @return vars.$white;
-    }
-}

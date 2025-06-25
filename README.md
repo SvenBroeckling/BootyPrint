@@ -134,6 +134,27 @@ Basic bootstrap border classes:
 <div class="border-start">Border left</div>
 ```
 
+### Absolute Positioning
+
+Utilities for setting absolute positioning values (top, bottom, left, right) and dimensions (width, height):
+
+```html
+<!-- Position elements with precise measurements -->
+<div class="position-absolute top-10mm start-20mm width-50mm height-30mm">
+  Absolutely positioned box
+</div>
+
+<!-- Available units: mm, cm, in -->
+<div class="position-absolute bottom-2cm end-3cm width-5cm height-2cm">
+  Positioned from bottom-right
+</div>
+
+<!-- Values from 0 to 600 are supported for each unit -->
+<div class="position-absolute top-0mm start-0mm width-210mm height-297mm">
+  Full A4 page overlay
+</div>
+```
+
 ### Columns
 
 CSS Columns:
@@ -232,12 +253,6 @@ BootyPrint includes various table styles:
 <!-- Combining Styles -->
 <table class="table table-striped table-underline table-compact">
   <caption>Compact Striped Table with Underlines</caption>
-  <!-- Table content... -->
-</table>
-
-<!-- Colored Table -->
-<table class="table table-primary">
-  <caption>Primary-Colored Table</caption>
   <!-- Table content... -->
 </table>
 ```

@@ -7,7 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Released]
 
-### [0.0.10]
+### [0.0.10] - 2025-06-25
+
+#### Added
+- Added list-group component
+- Added table components with multiple styling options (basic, bordered, underlined, striped, dotted, dashed)
+- Added absolute position and length classes
+
+#### Changed
+- Made the inlay title of cards smaller
+
+#### Fixed
+- Fixed grid system to work properly with WeasyPrint by removing negative padding on container and adjusting row margins
+
 
 ### [0.0.9]
 
@@ -56,17 +68,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Core functionality for typography, grid system, and layout components
 - Support for variables and print media directives
 - Modern build system with SCSS source files
-
-
-### [Unreleased]
-
-#### Added
-- Added list-group component
-- Added table components with multiple styling options (basic, bordered, underlined, striped, dotted, dashed)
-
-#### Changed
-- Made the inlay title of cards smaller
-
-#### Fixed
-- Fixed grid system to work properly with WeasyPrint by removing negative padding on container and adjusting row margins
-

@@ -179,6 +179,51 @@
         </div>
     </div>
 
+    <!-- Absolute Positioning -->
+    <div class="mb-4 p-3 border border-1 border-black rounded-2 page-break-avoid">
+        <h2 class="mb-3 pb-2 border-bottom">Absolute Positioning</h2>
+        <p>BootyPrint provides utilities for precise positioning with absolute measurements using mm, cm, and in units:</p>
+
+        <div class="position-relative bg-light" style="height: 15cm; width: 100%; overflow: hidden;">
+            <div class="position-absolute top-10mm start-10mm width-30mm height-20mm bg-primary text-white p-2 d-flex align-items-center justify-content-center">
+                top-10mm<br>start-10mm
+            </div>
+
+            <div class="position-absolute bottom-10mm end-10mm width-30mm height-20mm bg-danger text-white p-2 d-flex align-items-center justify-content-center">
+                bottom-10mm<br>end-10mm
+            </div>
+
+            <div class="position-absolute top-2cm end-2cm width-3cm height-2cm bg-success text-white p-2 d-flex align-items-center justify-content-center">
+                top-2cm<br>end-2cm
+            </div>
+
+            <div class="position-absolute bottom-2cm start-2cm width-3cm height-2cm bg-warning p-2 d-flex align-items-center justify-content-center">
+                bottom-2cm<br>start-2cm
+            </div>
+
+            <div class="position-absolute top-6cm start-50mm width-40mm height-25mm bg-info p-2 d-flex align-items-center justify-content-center">
+                top-6cm<br>start-50mm
+            </div>
+
+            <div class="position-absolute top-1in start-5in width-2in height-1in bg-dark text-white p-2 d-flex align-items-center justify-content-center">
+                top-1in<br>start-5in
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <h4>Available Classes</h4>
+            <ul>
+                <li><code>top-[0-600][mm|cm|in]</code> - Sets the top position</li>
+                <li><code>bottom-[0-600][mm|cm|in]</code> - Sets the bottom position</li>
+                <li><code>start-[0-600][mm|cm|in]</code> - Sets the left position</li>
+                <li><code>end-[0-600][mm|cm|in]</code> - Sets the right position</li>
+                <li><code>width-[0-600][mm|cm|in]</code> - Sets the element width</li>
+                <li><code>height-[0-600][mm|cm|in]</code> - Sets the element height</li>
+            </ul>
+            <p class="small text-muted">Note: Use with <code>position-absolute</code> or <code>position-relative</code> classes.</p>
+        </div>
+    </div>
+
     <!-- Cards -->
     <div class="mb-4 p-3 border border-1 border-black rounded-2 page-break-avoid">
         <h2 class="mb-3 pb-2 border-bottom">Cards</h2>
@@ -406,8 +451,8 @@
 
         <div class="row mb-4">
             <div class="col-6">
-                <h4>Colored Table</h4>
-                <table class="table table-primary mb-4">
+                <h4>Condensed Table</h4>
+                <table class="table table-condensed mb-4">
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -464,74 +509,6 @@
                 </table>
             </div>
         </div>
-
-        <h3 class="mb-3 mt-5">Table Options Summary</h3>
-        <table class="table table-bordered table-underline">
-            <thead>
-                <tr>
-                    <th>Class</th>
-                    <th>Description</th>
-                    <th>Combinable With</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><code>.table</code></td>
-                    <td>Base table style with basic formatting</td>
-                    <td>All other table classes</td>
-                </tr>
-                <tr>
-                    <td><code>.table-bordered</code></td>
-                    <td>Adds borders to all cells</td>
-                    <td>.table-dotted, .table-dashed, .table-striped, .table-compact</td>
-                </tr>
-                <tr>
-                    <td><code>.table-underline</code></td>
-                    <td>Adds only horizontal borders between rows</td>
-                    <td>.table-striped, .table-compact, .table-dotted, .table-dashed</td>
-                </tr>
-                <tr>
-                    <td><code>.table-striped</code></td>
-                    <td>Alternating background colors for rows</td>
-                    <td>All other table classes</td>
-                </tr>
-                <tr>
-                    <td><code>.table-dotted</code></td>
-                    <td>Changes border style to dotted</td>
-                    <td>.table-bordered, .table-underline, .table-rows-only</td>
-                </tr>
-                <tr>
-                    <td><code>.table-dashed</code></td>
-                    <td>Changes border style to dashed</td>
-                    <td>.table-bordered, .table-underline, .table-rows-only</td>
-                </tr>
-                <tr>
-                    <td><code>.table-condensed</code></td>
-                    <td>Reduces cell padding for more compact tables</td>
-                    <td>All other table classes</td>
-                </tr>
-                <tr>
-                    <td><code>.table-compact</code></td>
-                    <td>Reduces cell padding even further for more compact tables</td>
-                    <td>All other table classes</td>
-                </tr>
-                <tr>
-                    <td><code>.table-align-middle</code></td>
-                    <td>Vertically centers content in cells</td>
-                    <td>All other table classes</td>
-                </tr>
-                <tr>
-                    <td><code>.table-auto</code></td>
-                    <td>Table width based on content (not 100%)</td>
-                    <td>All other table classes</td>
-                </tr>
-                <tr>
-                    <td><code>.table-[color]</code></td>
-                    <td>Contextual coloring (primary, secondary, success, etc.)</td>
-                    <td>Most other table classes</td>
-                </tr>
-            </tbody>
-        </table>
     </div>
 </div>
 </body>
