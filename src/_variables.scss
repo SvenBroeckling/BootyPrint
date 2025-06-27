@@ -59,6 +59,9 @@ $link-decoration: css-var("link-decoration", none) !default;
 $link-hover-color: css-var("link-hover-color", $indigo) !default;
 $link-hover-decoration: css-var("link-hover-decoration", underline) !default;
 
+// Blockquote
+$blockquote-bg: css-var("blockquote-bg", $gray-300) !default;
+
 // Grid
 $grid-columns: 12 !default;
 $grid-gutter-width: 1rem !default;

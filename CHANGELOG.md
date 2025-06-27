@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Released]
 
+### [0.0.11] - 2025-06-27
+
+#### Added
+- Added chapter class
+- Added blockquote default style
+
 ### [0.0.10] - 2025-06-25
 
 #### Added

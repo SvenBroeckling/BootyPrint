@@ -1,5 +1,18 @@
-/* A book chapter, following the common practices */
+/*
+A book chapter following common practices:
+
+A chapter that requires the page to be set up for book printing (with alternating left and right margins) has the following behaviour:
+
+- The chapter always starts on the right-hand page.
+- A page break is always made before the chapter; it never starts on a half page.
+- Images are full width by default.
+*/
 
 .chapter {
-    page-break-before: always;
+    page-break-before: right;
+}
+
+.chapter img {
+    width: 100%;
+    height: auto;
 }
